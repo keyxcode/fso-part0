@@ -1,3 +1,6 @@
+- Sequence diagram for the chain of events caused by creating a new note on: https://studies.cs.helsinki.fi/exampleapp/spa
+- The process happens without any redirect or refresh of the whole page.
+
 ```mermaid
 sequenceDiagram
     participant browser
