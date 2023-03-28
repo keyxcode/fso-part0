@@ -1,7 +1,15 @@
+- Sequence diagram for the chain of events caused by creating a new note on: https://studies.cs.helsinki.fi/exampleapp/notes
+- This is an example of a traditional web page where all of the logic is on the server, and the browser needs to reload the whole page as instructed.
+
 ```mermaid
 sequenceDiagram
     participant browser
     participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->>browser: 302 URL Redirect
+    deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
